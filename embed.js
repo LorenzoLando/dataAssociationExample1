@@ -15,10 +15,11 @@ var postSchema = new mongoose.Schema({ //1
 var Post = mongoose.model("Post", postSchema); //2
 
 
-//crea una nuova instanza di Post e iseriscila nel database
+//1- crea una nuova instanza di Post 
+//2- la salvo nel database
 
-// var newPost = new Post({title: "The Snoopy post", content: "This is the first post the regards Snoopy"});
-// newPost.save((err, post)=>{
+// var newPost = new Post({title: "The Snoopy post", content: "This is the first post the regards Snoopy"}); //1
+// newPost.save((err, post)=>{ //2
 // 	if(err){
 // 		console.log(err);
 // 	} else {
@@ -30,7 +31,7 @@ var Post = mongoose.model("Post", postSchema); //2
 //USER - email, name
 //1-definisco uno schema per i record user
 //2-utilizzo lo schema in un modello
-//3- per associare i post agli users devo dare una key che contiene un array di users
+//3- per associare i post agli users devo dare una key che contiene un array di posts
 
 var userSchema = new mongoose.Schema({ //1
 	email: String,
