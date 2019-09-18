@@ -1,3 +1,8 @@
 # dataAssociationExample1
 Data Association one to many example
-This is a first example of data association one to many, we archive that embeding the post schema into the user model retriving it and pushing new posts into it
+
+This repository contains examples related to the data association, it contains a series  of .js files each one contains a different way to associate data 
+1-embed.js
+  	contains an example of data association one too many embedding an array of records in the records they need to be associated with
+2-refrences.js
+	contains an example  
