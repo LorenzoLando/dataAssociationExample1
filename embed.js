@@ -1,7 +1,10 @@
 //1- mongoose e` il pacchetto che permette di creare uno schema per i record che inseriremo nel database
 //2- connesso al database
-var mongoose = require("mongoose"); //1
-mongoose.connect("mongodb://localhost/blog_demo"); //2
+//1- mongoose e` il pacchetto che permette di creare uno schema per i record che inseriremo nel database
+//2- connesso al database
+const express = require("express");
+	  app = express(), //creo una istanza di esxpress
+	  mongoose = require("mongoose"); //1
 
 //POST - title, content
 //1-definisco uno schema per i record POST
@@ -45,10 +48,7 @@ var User = mongoose.model("User", userSchema); //2
 
 //crea una nuova instanza di user 
 
- // var newUser = new User({
- // email: "ciao@ciao.it", 
- // name: "Test Test"
- // });
+
 
 //pusho il post all`interno dell`array di post 
 //genero un nuovo record dello schema post 
@@ -90,6 +90,16 @@ User.findOne({name: "Test Test"}, (err, user)=> { //1
 			}
 		});
 	}
+});
+
+
+
+
+//Mi connetto al server NB: questa riga puo` andare in qualunque posizione del file il metodo viene richiamato ogni volta 
+//che viene fatta una richiesta in questo port.
+//il codice apre il port a ricevere richieste http
+app.listen(3000, () => {
+  console.log("embeded app has started!!!!!");
 });
 
 
